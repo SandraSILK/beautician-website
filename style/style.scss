@@ -1,0 +1,217 @@
+﻿$bgColors: (base: rgb(244,244,244), about: rgb(249,231,222), contact: rgb(229,216,49), footer: rgb(151,141,19), promo: rgb(249,231,222));
+$fontColors: (base: rgb(229,216,49), contact(rgb(164,156,3));
+$navColors: (base: rgb(180,151,0), hover: rgb(211,119,82));
+$otherColors: rgb(229,216,49);
+$socialLinks: (base: rgb(151,141,19), hover: rgb(249,231,222));
+$font: 'Raleway';
+
+body {
+    margin: 0;
+    background: map-get($bgColors, "base");
+    font-family: $font, sans-serif;
+}
+
+#mainmenu {
+    color: map-get($fontColors, "base");
+    font-size: 1.3em;
+    z-index: 100;
+}
+
+#logo {
+    font-size: 10em;
+    color: map-get($fontColors, "base");
+    position: absolute;
+    z-index: 200;
+    margin-top: -40px;
+    animation: hello 10s;
+}
+
+@keyframes hello {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    55% {
+        font-size: 11em;
+    }
+    60% {
+        font-size: 9em;
+    }
+    65% {
+        font-size: 11em;
+    }
+    70% {
+        font-size: 9em;
+    }
+    75% {
+        font-size: 11em;
+    }
+    80% {
+        font-size: 9em;
+    }
+}
+
+.logo_text {
+    position: absolute;
+    z-index: 300;
+    color: rgb(235,172,131);
+    font-size: 3em;
+    font-weight: bold;
+    margin-left: 14px;
+    text-shadow: 2px 2px rgb(211,119,82);
+}
+#nav ul {
+    padding-top: 0.3%;
+}
+#nav a {
+    color: map-get($navColors, "base");
+    letter-spacing: 5px;
+}
+#nav a:hover {
+    /*background: rgb(244,244,244); */
+    color: map-get($navColors, "hover");
+}
+#btn_hamburger {
+    background: rgb(229,216,49);
+}
+#background {
+    z-index: 100;
+    position: absolute;
+    display: block;
+}
+#prom1, #prom2, #prom3 {
+    background: map-get($bgColors, 'promo');
+    /*position: absolute;*/
+    z-index: 200;
+    opacity: .7;  
+}
+#prom1 {
+    margin-top: 45%;
+}
+#prom2, #prom3 {
+    margin-top: 20px;
+}
+.jumbotron {
+    background: url('../grafika/grafika/pielegnacja-twarzy.jpg') no-repeat center;
+    height: 1200px;
+    overflow: none;
+}
+.zabieg {
+    border: 5px dashed map-get($bgColors, 'contact');
+    background: map-get($socialLinks, 'hover');
+    margin-bottom: 20px;
+}
+.zabieg ul {
+    list-style-type: none;
+    letter-spacing: 2px;
+}
+
+#zabieg ul > li a {
+    line-height: 25px;
+    height: 30px;
+    font-size: 1.2em;
+}
+#zabieg ul > li a:hover {
+    text-transform: uppercase;
+    color: $otherColors;
+    text-decoration: none;
+}
+#zabieg ul > li {
+    list-style-type: none;
+}
+#about {
+    background: map-get($bgColors, "about");
+}
+#about h4 {
+    padding-top: 4%;
+}
+#about p {
+    letter-spacing: 1px;
+    padding-top: 2%;
+}
+#about img {
+    margin-top: -15%;
+    margin-bottom: 5%;
+    width: 75%;
+    float: right;
+}
+@media (max-width: 768px) {
+    #about img {
+        display: none !important;
+    }
+}
+#contact {
+    height: auto;
+    background: map-get($bgColors, "contact");
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+#contact p {
+    font-size: 1.25em;
+    padding-left: 5%;
+}
+#contact h3 {
+    color: map-get($fontColors, 'contact';)
+    letter-spacing: 1px;
+}
+h1 {
+    letter-spacing: 3px;
+}
+#map {
+   /* height: 450px;*/
+}
+.social, .social a, .social a:active, .social a:visited {
+    padding-top: 5%;
+    font-size: 2em;
+    padding-left: 5%;
+    color: map-get($socialLinks, "base");
+}
+.social a:hover {
+    color: map-get($socialLinks, "hover");
+}
+footer {
+    background: map-get($bgColors, "footer");
+    color: $otherColors;
+    padding-top: .5%;
+    text-align: center;
+    letter-spacing: 1px;
+}
+footer a, footer a:visited, footer a:active {
+    color: map-get($bgColors, 'contact');
+    font-size: 1.1em;
+}
+footer a:hover {
+    color: map-get($socialLinks, 'hover');
+}
+@media (min-width: 769px) and (max-width: 992px) {
+    .jumbotron {
+        background: url('../grafika/grafika/pielegnacja-twarzy-mini.jpg') center no-repeat;
+    }
+    #prom1 {
+        margin-top: 550px;
+    }
+}
+@media (max-width: 768px) {
+    #logo {
+    font-size: 7em;
+    animation: none;
+    }
+
+    .logo_text {
+        font-size: 2em;
+    }
+    .sm-col-2 {
+        max-width: 50%;
+    }
+    .jumbotron {
+        background: url('../grafika/grafika/pielegnacja-twarzy-mini.jpg') center no-repeat;
+    }
+    #prom1 {
+        margin-top: 700px;
+    }
+    #prom1 p, #prom2 p, #prom3 p {
+        display: none;
+    }
+}
