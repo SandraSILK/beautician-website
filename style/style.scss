@@ -1,5 +1,5 @@
 ﻿$bgColors: (base: rgb(244,244,244), about: rgb(249,231,222), contact: rgb(229,216,49), footer: rgb(151,141,19), promo: rgb(249,231,222));
-$fontColors: (base: rgb(229,216,49), contact(rgb(164,156,3));
+$fontColors: (base: rgb(229,216,49), contact: rgb(164,156,3));
 $navColors: (base: rgb(180,151,0), hover: rgb(211,119,82));
 $otherColors: rgb(229,216,49);
 $socialLinks: (base: rgb(151,141,19), hover: rgb(249,231,222));
@@ -83,14 +83,14 @@ body {
 }
 #prom1, #prom2, #prom3 {
     background: map-get($bgColors, 'promo');
-    /*position: absolute;*/
+    position: relative;
     z-index: 200;
-    opacity: .7;  
+    opacity: .7;
 }
 #prom1 {
     margin-top: 45%;
 }
-#prom2, #prom3 {
+#prom2, #prom3{
     margin-top: 20px;
 }
 .jumbotron {
@@ -153,14 +153,14 @@ body {
     padding-left: 5%;
 }
 #contact h3 {
-    color: map-get($fontColors, 'contact';)
+    color: map-get($fontColors, 'contact');
     letter-spacing: 1px;
 }
 h1 {
     letter-spacing: 3px;
 }
 #map {
-   /* height: 450px;*/
+   height: 450px;
 }
 .social, .social a, .social a:active, .social a:visited {
     padding-top: 5%;
@@ -213,5 +213,18 @@ footer a:hover {
     }
     #prom1 p, #prom2 p, #prom3 p {
         display: none;
+    }
+}
+@media (min-width: 1701px) {
+    #prom1 {
+        margin-top: 620px;
+		width: 700px;
+    }
+
+	#prom1, #prom2 {
+		width: 700px;
+    }
+    #about img {
+        height:500px;
     }
 }
