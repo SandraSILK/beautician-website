@@ -7,6 +7,7 @@
       <meta name="decription" content="salon kosmetyczny Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod">
       <meta name="keywords" content="kosmetyczny, beautician, beauty, piękno">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" type="image/png" href="grafika/grafika/favicon.png" />
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css" type="text/css">
       <link href="fontello/css/fontello.css" type="text/css" rel="stylesheet">
@@ -15,7 +16,7 @@
 <body>
     <nav class="navbar vanbar-default navbar-fixed-top" id="nav"> 
       <div class="container-fluid" style="background-color: rgb(244,244,244)">
-        <div class="navbar-header page-scroll">
+        <div class="navbar-header">
         <!--responsywność-->
           <button type="button" class="navbar-toggle collapsed navbar-right" data-toggle="collapse" data-target="#mainmenu" aria-expanded="false" id="btn_hamburger">
             <span class="sr-only">Toggle navigation</span>
@@ -23,20 +24,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar brand" href="#"><i class="icon-heart" id="logo"></i><p class="logo_text">Beauty</p></a>
+          <a class="navbar brand scroll" href="#face"><i class="icon-heart" id="logo"></i><p class="logo_text">Beauty</p></a>
         </div>
         <div class="collapse navbar-collapse navbar-right" id="mainmenu">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#about">o nas</a></li>
-            <li><a href="#offer">oferta</a></li>
-            <li><a href="#price">cennik</a></li>
-            <li><a href="#contact">kontakt</a></li>
-            <li><a href="#">galeria</a></li>
-          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#about" class="scroll">o nas</a></li>
+                <li><a href="#offer" class="scroll">oferta</a></li>
+                <li><a href="#price" class="scroll">cennik</a></li>
+                <li><a href="#contact" class="scroll">kontakt</a></li>
+            </ul>
         </div>
       </div>
     </nav>  
-<div class="container-fluid">
+<div class="container-fluid" id="face">
   <!-- zdjecie-->
 	<div class="row">
     	<div class="jumbotron">   
@@ -67,8 +67,8 @@
 	</div>
 </div>
 <section>
-    <div class="container-fluid" id="offer">
-        <div class="row" >
+    <div class="container-fluid">
+        <div class="row" id="offer">
             <div class="col-xs-12">
                 <h1>rekomendowane zabiegi</h1>
             </div>
@@ -312,5 +312,6 @@ src ="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoOtE6gwMA41QKUCothveWJN
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/mapa.js"></script>
+    <script src="js/scroll.js"> </script>
 </body>
 </html>

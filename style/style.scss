@@ -4,13 +4,11 @@ $navColors: (base: rgb(180,151,0), hover: rgb(211,119,82));
 $otherColors: rgb(229,216,49);
 $socialLinks: (base: rgb(151,141,19), hover: rgb(249,231,222));
 $font: 'Raleway';
-
 body {
     margin: 0;
     background: map-get($bgColors, "base");
-    font-family: $font, sans-serif;
+    font-family: $font, sans-serif;    
 }
-
 #mainmenu {
     color: map-get($fontColors, "base");
     font-size: 1.3em;
